@@ -1,0 +1,22 @@
+name: csvcodec
+description: CSV codec
+
+transform:
+  - step: Read CSV records from input file
+    action: extract.formats.CSV.ReadRecords
+
+  - step: Set the schema
+    action: transform.schema.SetSchema
+    fields:
+      - name: myfield
+        type: string
+      - name: mydate
+        type: date
+
+  - step: Convert dates from strings to dates
+    action: transform.conversion.ParseDatetime
+    fields:
+      - field_name: mydate
+        formats:
+          - "%m-%d-%Y"
+        date_only: true
