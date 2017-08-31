@@ -2,7 +2,7 @@ extract:
   - step: 1. Download CSV file
     action: extract.source.http.DownloadFiles
     fetch:
-      - "https://raw.githubusercontent.com/enigmadocs/dataflow-demo/master/input.csv"
+      - "https://raw.githubusercontent.com/enigmadocs/codec-demo/master/input.csv"
 
   - step: Execute the codec in /codecs/csvcodec
     action: parsekit.ApplyCodec
