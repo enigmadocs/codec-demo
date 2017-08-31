@@ -16,7 +16,7 @@ transform:
   - step: Convert dates from strings to dates
     action: transform.conversion.ParseDatetime
     fields:
-      - field_name: mydate
+      - field_name: DOB
         formats:
           - "MM-DD-YYYY"
         date_only: true
