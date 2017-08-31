@@ -8,9 +8,9 @@ transform:
   - step: Set the schema
     action: transform.schema.SetSchema
     fields:
-      - name: myfield
+      - name: Name
         type: string
-      - name: mydate
+      - name: DOB
         type: date
 
   - step: Convert dates from strings to dates
@@ -18,5 +18,5 @@ transform:
     fields:
       - field_name: mydate
         formats:
-          - "%m-%d-%Y"
+          - "MM-DD-YYYY"
         date_only: true
