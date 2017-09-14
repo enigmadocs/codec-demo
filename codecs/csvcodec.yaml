@@ -1,7 +1,7 @@
 name: csvcodec
 description: CSV codec
 
-# transform:
+transform:
   - step: Status message to console
     action: debug.LogExpression
     expression: "'Starting csvcodec'"
