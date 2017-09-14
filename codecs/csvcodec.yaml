@@ -1,7 +1,11 @@
 name: csvcodec
 description: CSV codec
 
-transform:
+# transform:
+  - step: Status message to console
+    action: debug.LogExpression
+    expression: "'Starting csvcodec'"
+
   - step: Read CSV records from input file
     action: extract.formats.CSV.ReadRecords
 
